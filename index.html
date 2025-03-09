@@ -18,10 +18,11 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            text-align: center;
             flex-direction: column;
+            text-align: center;
             box-sizing: border-box; /* Assicura che padding e margini siano calcolati correttamente */
+            height: 100vh; /* Imposta la larghezza e l'altezza per riempire lo schermo */
+            padding: 0; /* Rimuove qualsiasi padding */
         }
         h1 {
             font-size: 3.5rem;
@@ -41,8 +42,8 @@
         /* Media query per dispositivi con larghezza massima di 600px (smartphone) */
         @media (max-width: 600px) {
             body {
-                padding-top: 10px; /* Aggiunge spazio sopra il contenuto */
-                padding-bottom: 10px; /* Aggiunge spazio sotto il contenuto */
+                padding-top: 0; /* Rimuove spazio extra sopra il contenuto */
+                padding-bottom: 0; /* Rimuove spazio extra sotto il contenuto */
             }
             h1 {
                 font-size: 2rem; /* Riduce la dimensione del testo sui dispositivi mobili */
