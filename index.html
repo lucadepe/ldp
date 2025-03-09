@@ -24,10 +24,24 @@
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: -4px; /* Diminuisce la spaziatura tra le lettere */
+            white-space: nowrap; /* Evita che il testo vada a capo */
         }
         iframe {
             border: none;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Media query per dispositivi con larghezza massima di 600px (smartphone) */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem; /* Riduce la dimensione del testo sui dispositivi mobili */
+                transform: scaleY(1.3); /* Diminuisce il "stretching" verticale su mobile */
+                letter-spacing: -1px; /* Adatta la spaziatura per schermi più piccoli */
+            }
+            iframe {
+                width: 100%; /* Adatta il video alla larghezza del dispositivo */
+                height: auto; /* Mantiene il rapporto dell'iframe */
+            }
         }
     </style>
 </head>
