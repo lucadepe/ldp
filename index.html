@@ -13,10 +13,11 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start; /* Cambiato da center a flex-start */
             height: 100vh;
             text-align: center;
             flex-direction: column;
+            padding-top: 15%; /* Spaziatura del 15% dal bordo superiore */
         }
         h1 {
             font-size: 3.5rem;
@@ -28,6 +29,18 @@
         iframe {
             border: 2px solid #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            max-width: 100%; /* Ridimensionamento per i dispositivi mobili */
+            height: auto;
+        }
+        /* Media query per schermi piccoli */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem; /* Font più piccolo per dispositivi mobili */
+            }
+            iframe {
+                width: 100%; /* Imposta la larghezza dell'iframe al 100% del contenitore */
+                height: 450px; /* Altezza fissa per iframe su dispositivi mobili */
+            }
         }
     </style>
 </head>
