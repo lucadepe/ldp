@@ -20,32 +20,31 @@
         }
         h1 {
             font-size: 3.5rem;
-            transform: scaleY(1.2); 
+            transform: scaleY(1.2);
             margin-bottom: 20px;
             text-transform: uppercase;
             letter-spacing: -4px;
         }
-        .video-container {
-            position: relative;
-            width: 100%;
-            max-width: 800px; /* limite per PC */
-            aspect-ratio: 16 / 9; /* mantiene le proporzioni */
-        }
         iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
             border: 2px solid #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            width: 800px;
+            height: 450px;
+        }
+
+        /* Stili per dispositivi mobili */
+        @media (max-width: 768px) {
+            iframe {
+                width: 90vw; /* Occupa il 90% della larghezza dello schermo */
+                height: calc(90vw * 9 / 16); /* Mantiene il rapporto 16:9 */
+            }
         }
     </style>
 
 </head>
 <body>
     <h1>Thursday Night Dinner</h1>
-    <iframe src="https://drive.google.com/file/d/1wwO64awp1GE0yMJIKhdTiEiVV-BJ7eYq/preview" 
+    <iframe src="https://drive.google.com/file/d/1wwO64awp1GE0yMJIKhdTiEiVV-BJ7eYq/preview?disablekb=1"
             width="800" height="450" allow="autoplay; fullscreen">
     </iframe>
 </body>
