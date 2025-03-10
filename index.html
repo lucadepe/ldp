@@ -20,16 +20,28 @@
         }
         h1 {
             font-size: 3.5rem;
-            transform: scaleY(1.2); /* Stretch verticale */
+            transform: scaleY(1.2); 
             margin-bottom: 20px;
             text-transform: uppercase;
-            letter-spacing: -4px; /* Diminuisce la spaziatura tra le lettere */
+            letter-spacing: -4px;
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px; /* limite per PC */
+            aspect-ratio: 16 / 9; /* mantiene le proporzioni */
         }
         iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             border: 2px solid #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
     </style>
+
 </head>
 <body>
     <h1>Thursday Night Dinner</h1>
