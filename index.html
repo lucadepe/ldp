@@ -40,14 +40,16 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
         .mask {
-            width: 48px;
-            height: 48px;
             position: absolute;
             top: 0;
             right: 0;
-            background: #fff;
-            opacity: 0.9; /* Invisible mask for the pop-out button */
-            /*pointer-events: none; /* Ensures it doesn’t block anything else */
+            width: 176px;
+            height: 99px;
+        }
+        .mask img {
+            width: 100%;
+            height: auto;
+            opacity: 0.9;
         }
     </style>
 </head>
@@ -57,7 +59,8 @@
         <iframe src="https://drive.google.com/file/d/1wwO64awp1GE0yMJIKhdTiEiVV-BJ7eYq/preview" 
                 allow="fullscreen" frameborder="0" scrolling="no">
         </iframe>
-        <div class="mask"></div>
-    </div>
+        <div class="mask">
+            <img src="logo_ldp1.png" alt="Mask Image">
+        </div>
 </body>
 </html>
