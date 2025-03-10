@@ -12,12 +12,13 @@
             margin: 0;
             padding: 0;
             display: flex;
-            justify-content: flex-start; /* Sposta il contenuto verso l'alto */
+            justify-content: flex-start;
             align-items: center;
             height: 100vh;
             text-align: center;
             flex-direction: column;
-            padding-top: 10vh; /* Regola la distanza dall'alto */
+            padding-top: 10vh;
+            overflow: hidden; /* No scrollbar */
         }
         h1 {
             font-size: 3.5rem;
@@ -26,27 +27,37 @@
             text-transform: uppercase;
             letter-spacing: -4px;
         }
+        .video-container {
+            position: relative;
+            width: 90vw;
+            max-width: 800px;
+            aspect-ratio: 16 / 9;
+        }
         iframe {
+            width: 100%;
+            height: 100%;
             border: 2px solid #fff;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            width: 800px;
-            height: 450px;
         }
-
-        /* Stili per dispositivi mobili */
-        @media (max-width: 768px) {
-            iframe {
-                width: 90vw; /* Occupa il 90% della larghezza dello schermo */
-                height: calc(90vw * 9 / 16); /* Mantiene il rapporto 16:9 */
-            }
+        .mask {
+            width: 48px;
+            height: 48px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: transparent;
+            opacity: 0; /* Invisible mask for the pop-out button */
+            pointer-events: none; /* Ensures it doesn’t block anything else */
         }
     </style>
-
 </head>
 <body>
     <h1>Thursday Night Dinner</h1>
-    <iframe src="https://drive.google.com/file/d/1wwO64awp1GE0yMJIKhdTiEiVV-BJ7eYq/preview?disablekb=1"
-            width="800" height="450" allow="autoplay; fullscreen">
-    </iframe>
+    <div class="video-container">
+        <iframe src="https://drive.google.com/file/d/1wwO64awp1GE0yMJIKhdTiEiVV-BJ7eYq/preview" 
+                allow="fullscreen" frameborder="0" scrolling="no">
+        </iframe>
+        <div class="mask"></div>
+    </div>
 </body>
 </html>
